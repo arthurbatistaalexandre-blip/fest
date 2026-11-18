@@ -1,0 +1,6 @@
+{
+  "name": "Decorefest Catalão",
+  "description": "Decoração completa para festas infantis e eventos em Catalão - GO. Levamos e montamos toda a estrutura no local escolhido por você.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --bg-canvas: 228 45% 6%;
+  --bg-surface: 230 36% 10%;
+  --bg-surface-elevated: 268 38% 13%;
+  --text-primary: 210 40% 98%;
+  --text-secondary: 215 22% 78%;
+  --text-muted: 216 16% 60%;
+  --brand-ocean: 199 89% 48%;
+  --brand-ocean-ink: 204 78% 7%;
+  --brand-purple: 273 67% 39%;
+  --brand-purple-soft: 273 72% 72%;
+  --border-subtle: 226 28% 18%;
+}
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Raleway", system-ui, -apple-system, sans-serif;
+
+  --color-canvas: hsl(var(--bg-canvas));
+  --color-surface: hsl(var(--bg-surface));
+  --color-surface-elevated: hsl(var(--bg-surface-elevated));
+  --color-ink: hsl(var(--text-primary));
+  --color-ink-secondary: hsl(var(--text-secondary));
+  --color-ink-muted: hsl(var(--text-muted));
+  --color-ocean: hsl(var(--brand-ocean));
+  --color-ocean-ink: hsl(var(--brand-ocean-ink));
+  --color-purple: hsl(var(--brand-purple));
+  --color-purple-soft: hsl(var(--brand-purple-soft));
+  --color-line: hsl(var(--border-subtle));
+}
+
+@layer base {
+  html {
+    background-color: hsl(var(--bg-canvas));
+    color: hsl(var(--text-primary));
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: hsl(var(--bg-canvas));
+    color: hsl(var(--text-primary));
+    line-height: 1.65;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background-color: hsl(var(--brand-ocean) / 0.3);
+    color: hsl(var(--text-primary));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
